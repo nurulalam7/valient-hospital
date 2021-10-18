@@ -1,0 +1,16 @@
+.insuran h3{
+    text-align: center;
+    font-size: 40px;
+    color: orange;
+    margin-top: 40px;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+.insuran img{
+    height:200px;
+    width: 250px;
+
+}
+.insuran img:hover{
+    box-shadow: 5px gray;
+    border: 1px gray;
+}

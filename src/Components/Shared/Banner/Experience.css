@@ -1,0 +1,26 @@
+.extext h2{
+      text-align: center;
+      margin-top: 40px;
+      color: salmon;
+    
+
+}
+.extext h6{
+    padding-left: 15px;
+}
+.extext img{
+    margin-top: 10px;
+    height: 300px;
+    width: 350px;
+
+}
+.extext img:hover{
+    border-radius:2px;
+    box-shadow: 5px 5px 5px gray;
+}
+.buttt{
+    border: none;
+    background-color: salmon;
+    border-radius: 3px ;
+    margin-left: 20px;
+}

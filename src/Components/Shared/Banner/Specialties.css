@@ -1,0 +1,13 @@
+.specialti h3{
+    text-align: center;
+    color: sienna;
+    margin-top: 40px;
+}
+.specialti img{
+    height: 200px;
+    width: 250px;
+    border-radius: 30px;
+}
+.specialti img:hover{
+    box-shadow: 5px 5px 5px gray;
+}
