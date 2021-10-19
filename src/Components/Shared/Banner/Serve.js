@@ -4,12 +4,13 @@ import Serveinfo from './Serveinfo';
 import './Serve.css'
 
 const Serve = () => {
-       const [serve,setserve]=useState([])
-       useEffect(()=>{
-           fetch("./servefake.JSON")
-           .then(res =>res.json())
-           .then(data=>setserve(data));
-       },[])
+    const [serve,setServe]=useState([]);
+    useEffect(()=>{
+        fetch('./servefake.JSON')
+        .then(res=>res.json())
+        .then(data=>setServe(data));
+    },[])
+
     return (
         <div className="headline">
             <h3>OUR SERVICES</h3>

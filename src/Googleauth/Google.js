@@ -1,6 +1,6 @@
 import React, { useState } from 'react'
-
-import { GoogleAuthProvider,getAuth, signInWithPopup } from "firebase/auth";
+import './Google.css'
+import { GoogleAuthProvider,getAuth, signInWithPopup,signOut } from "firebase/auth";
 import initializeauthentication from '../Firebase/firebase.init';
 
 
@@ -30,16 +30,30 @@ const Google = () => {
         })
        
        
-       
+      
 
        
       
     }
+    const handlesignout =()=>{
+        signOut(auth)
+        .then(()=>{
+            setUser({});
+        })
+    }
     return (
-        <div>
+        <div className="gmail">
+            <br />
+            <br />
+            <br />
            
-           <button  onClick={handlegooglesignin}>Google sign in</button>
-           <button>sign out</button>
+           {
+               !user.email?
+               <button  onClick={handlegooglesignin}>Google sign in</button> :
+               <button onClick={handlesignout}>sign out</button>
+          
+            }
+           
           
            <br />
 
@@ -53,6 +67,11 @@ const Google = () => {
 
           
             
+          
+           <br />
+           <br />
+           <br />
+           <br />
            <br />
 
           
