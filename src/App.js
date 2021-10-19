@@ -11,7 +11,8 @@ import Facilities from './Navlink/Facilities';
 import Service from './Navlink/Service';
 import Offer from './Navlink/Offer';
 import Signup from './Navlink/Signup';
-import Privateroute from './Navlink/Privateroute';
+
+import Notfound from './Navlink/Notfound';
 
 
 
@@ -37,13 +38,13 @@ function App() {
          <Route path="/facilities">
             <Facilities></Facilities>
          </Route>
-          <Privateroute path="/service">
+          <Route path="/service">
           
            <Service></Service>
-          </Privateroute>
+          </Route>
          
          <Route path="/offer">
-          <Offer></Offer>
+            <Offer></Offer>
          </Route>
          <Route path="/google">
            <Google></Google>
@@ -51,6 +52,9 @@ function App() {
          <Route path="/signup">
            <Signup></Signup>
            
+          </Route>
+          <Route path='*'>
+             <Notfound></Notfound>
           </Route>
 
 
