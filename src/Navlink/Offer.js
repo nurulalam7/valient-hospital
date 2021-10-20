@@ -11,7 +11,7 @@ const Offer = () => {
         .then(data=>setisoffer(data));
     },[])
     return (
-        <div className="ouroffer">
+        <div className="container ouroffer">
             <h1>our regular offer</h1>
                 <Row xs={1} md={3} className="g-4">
                         {

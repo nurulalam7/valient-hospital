@@ -15,7 +15,7 @@ const Service = () => {
     return (
        
              
-       <div className="informationofservice">
+       <div className="container informationofservice">
                    
                 <Row xs={1} md={3} className="g-4">
                         {
@@ -23,7 +23,7 @@ const Service = () => {
                                 key={ve.id}
                                 ve={ve}
                                 ></Servicefake>)
-                    }
+                        }
                         
                         
                    

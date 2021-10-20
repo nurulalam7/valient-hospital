@@ -13,7 +13,7 @@ const Facilities = () => {
     },[])
    
     return (
-        <div className="facili">
+        <div className="container facili ">
             <h2>our facilities</h2>
                <Row xs={1} md={3} className="g-4">
                         {

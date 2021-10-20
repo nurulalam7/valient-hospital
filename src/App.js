@@ -10,9 +10,15 @@ import About from '../src/Navlink/About'
 import Facilities from './Navlink/Facilities';
 import Service from './Navlink/Service';
 import Offer from './Navlink/Offer';
-import Signup from './Navlink/Signup';
+
 
 import Notfound from './Navlink/Notfound';
+
+import Login from './Navlink/Login';
+import Authprovider from './Context/Authprovider';
+import PrivateRoute from './Components/PrivateRoute/PrivateRoute';
+
+
 
 
 
@@ -23,6 +29,7 @@ function App() {
   return (
     <div className="">
      
+     <Authprovider>
      <Router>
        <Header></Header>
        <Switch>
@@ -35,25 +42,23 @@ function App() {
          <Route path="/about">
             <About></About>
          </Route>
-         <Route path="/facilities">
+         <PrivateRoute path="/facilities">
             <Facilities></Facilities>
-         </Route>
-          <Route path="/service">
+         </PrivateRoute>
+         
+          <PrivateRoute path="/service">
           
            <Service></Service>
-          </Route>
+          </PrivateRoute>
          
-         <Route path="/offer">
+         <PrivateRoute path="/offer">
             <Offer></Offer>
+         </PrivateRoute>
+         <Route path="/login">
+           <Login></Login>
          </Route>
-         <Route path="/google">
-           <Google></Google>
-         </Route>
-         <Route path="/signup">
-           <Signup></Signup>
-           
-          </Route>
-          <Route path='*'>
+         
+          <Route path=''>
              <Notfound></Notfound>
           </Route>
 
@@ -62,6 +67,7 @@ function App() {
         <Home></Home>
        
       </Router>
+     </Authprovider>
     
      
       

@@ -12,7 +12,7 @@ const Serve = () => {
     },[])
 
     return (
-        <div className="headline">
+        <div className="container headline">
             <h3>OUR SERVICES</h3>
             <Row xs={1} md={3} className="g-4">
                 {

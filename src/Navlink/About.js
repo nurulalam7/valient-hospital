@@ -11,7 +11,7 @@ const About = () => {
         .then(data=>setisabout(data));
     },[])
     return (
-        <div className="aboutinfo">
+        <div className="container aboutinfo">
             <h1>about us</h1>
                <Row xs={1} md={3} className="g-4">
                         {
