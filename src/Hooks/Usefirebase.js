@@ -23,6 +23,7 @@ const UseFirebase =()=>{
         
 
     }
+    
 
     const handlepassword=(e)=>{
         setPassword(e.target.value)
@@ -31,7 +32,7 @@ const UseFirebase =()=>{
     const signinusinggoogle=()=>{
         signInWithPopup(auth,googleprovider)
         .then(result=>{
-            console.log(result.user);
+            // console.log(result.user);
             setuser(result.user);
         })
         .catch(error=>{
@@ -57,7 +58,7 @@ const UseFirebase =()=>{
     useEffect(()=>{
         onAuthStateChanged(auth,user=>{
             if(user){
-                console.log("inside state change")
+                // console.log("inside state change")
                 setuser(user)
             }
         })

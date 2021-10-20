@@ -1,4 +1,7 @@
 .logininfo{
     text-align: center;
-    margin-top: 120px;
+    margin: 120px auto;
+    background-color: plum;
+    width: 80%;
+
 }

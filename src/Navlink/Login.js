@@ -11,13 +11,19 @@ const Login = () => {
     
     
     // const {signinusinggoogle}=UseFirebase();
-    const {signinusinggoogle, handleemail,handlepasword, signinwithemail}=useAuth();
-   
+    const {signinusinggoogle, handleemail,handlepassword, signinwithemail}=useAuth();
+    
+    const handleregistraiton=e=>{
+        
+        // console.log("")
+        e.preventDefault();
+    }
+    
 
     
     return (
         <div className="logininfo">
-            <Form>
+            <Form onSubmit={handleregistraiton}>
                     <Form.Group className="mb-2" controlId="formBasicEmail">
                         <Form.Label>Email address</Form.Label>
                         <Form.Control onChange={handleemail} type="email" placeholder="Enter email" />
@@ -28,12 +34,12 @@ const Login = () => {
 
                     <Form.Group className="mb-2" controlId="formBasicPassword">
                         <Form.Label >Password</Form.Label>
-                        <Form.Control onChange={handlepasword} type="password" placeholder="Password" />
+                        <Form.Control onChange={handlepassword} type="password" placeholder="Password" />
                     </Form.Group>
                     <Form.Group className="mb-3" controlId="formBasicCheckbox">
                         <Form.Check type="checkbox" label="Check me out" />
                     </Form.Group>
-                    <Button onClick={signinwithemail} variant="primary" type="submit">
+                    <Button className="btn btn-success" onClick={signinwithemail} variant="primary" type="submit">
                         register
                     </Button>
             </Form>
@@ -43,7 +49,7 @@ const Login = () => {
             <br />
             <br />
             <h2>please log in</h2>
-            <button onClick={signinusinggoogle}>google sign in</button>
+            <button className="btn btn-success" onClick={signinusinggoogle}>google sign in</button>
              
             <br />
             <Link to='/register'>new user?</Link>

@@ -13,7 +13,7 @@ const Header = () => {
        <>
        <Navbar bg="dark" variant="dark" fixed="top">
                 <Container>
-                 <Navbar.Brand href="#home">valient hospital</Navbar.Brand>
+                 <Navbar.Brand className="fw-bolder" href="#home"> VALIENT HOSPITAL   </Navbar.Brand>
                  <Navbar.Toggle />
                    <Navbar.Collapse className="justify-content-end">
                         <NavLink className="head" to="/bannermain">Home</NavLink>
@@ -25,10 +25,13 @@ const Header = () => {
                         
                         <Navbar.Text>
                          
-                            Signed in as: <a href="#login">{user.displayName}</a>
+                             <a className="text-decoration-none fw-bold" href="#login">{user.displayName}</a>
                         </Navbar.Text>
                         
-                       {user?.email && <button onClick={logout}>log out</button>}
+                       {user?.email && <button className="btn btn-success mx-2" onClick={logout}>log out</button>}
+                       {
+                           user.email && <img  src={user.photoURL} className="useriamge" alt="" />
+                       }
                        
                                                         
                         
